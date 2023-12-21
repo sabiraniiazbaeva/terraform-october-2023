@@ -4,7 +4,7 @@ resource "aws_key_pair" "deployer" {
 }
 
 output key_name {
-    value = aws_key_pair.deployer
+    value = aws_key_pair.deployer.key_type
 }
 
 resource "aws_s3_bucket" "bucket" {
